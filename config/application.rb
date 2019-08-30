@@ -19,5 +19,3 @@ module CarDealership
     end
   end
 end
-
-#test
