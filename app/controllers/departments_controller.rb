@@ -1,5 +1,5 @@
 class DepartmentsController < ApplicationController
   def index
-    @departments = ["Sales", "Finance", "Service"]
+    @departments = Department.all
   end
 end
