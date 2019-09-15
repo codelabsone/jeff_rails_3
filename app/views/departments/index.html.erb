@@ -1,7 +1,10 @@
 <h1>Car Dealership</h1>
 
-<p>Please select the department</p>
-
-<p>Sales</p>
-<p>Finance</p>
-<p>Inventory</p>
+<p>
+  Please select the department
+</p>
+<% @departments.each do |department| %>
+<p>
+  <%= department %>
+</p>
+<% end %>
