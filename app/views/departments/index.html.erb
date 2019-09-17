@@ -1,3 +1,10 @@
 <h1>Car Dealership</h1>
 
-<p>This is where the awesomeness will happen.</p>
+<p>
+  Please select the department
+</p>
+<% @departments.each do |department| %>
+  <h2><%= link_to department.name, department %></h2>
+  <%= department.description %>
+
+<% end %>

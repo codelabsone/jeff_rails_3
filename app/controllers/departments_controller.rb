@@ -1,5 +1,8 @@
 class DepartmentsController < ApplicationController
   def index
-    @departments = ["Sales", "Finance", "Service"]
+    @departments = Department.all
+  end
+  def show
+    @departments = Department.show(params[:id])
   end
 end
