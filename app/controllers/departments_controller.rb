@@ -3,7 +3,7 @@ class DepartmentsController < ApplicationController
     @departments = Department.all
   end
   def show
-    @department = Department.find(params[:id])
-  end
+    @departments = Department.show(params[:id])
 
+  end
 end
