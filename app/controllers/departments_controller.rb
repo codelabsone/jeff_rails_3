@@ -4,5 +4,6 @@ class DepartmentsController < ApplicationController
   end
   def show
     @departments = Department.show(params[:id])
+
   end
 end
