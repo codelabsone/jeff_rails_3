@@ -5,3 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Department.create!([
+  {
+    name: 'Sales',
+    description: "Meet the sales staff."
+  },
+  {
+    name: 'Finance',
+    description: "Calculate your loan payments."
+  },
+  {
+    name: 'Inventory',
+    description: "See our car inventory."
+  }
+  ])
