@@ -10,21 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190923231116) do
+ActiveRecord::Schema.define(version: 20190927011042) do
 
   create_table "departments", force: :cascade do |t|
+    t.string "sales"
+    t.string "finance"
+    t.string "inventory"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "name"
-    t.string "description"
   end
 
   create_table "sales", force: :cascade do |t|
     t.string "name"
     t.string "email"
     t.string "phone"
+    t.integer "department_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["department_id"], name: "index_sales_on_department_id"
   end
 
 end

@@ -20,3 +20,11 @@ Department.create!([
     description: "See our car inventory."
   }
   ])
+
+Sale.create!([
+  {
+    name: "Dustin LeGrand",
+    email: 'dustin.legrand@jeffscars.com',
+    phone: "573-579-1234"
+  }
+  ])

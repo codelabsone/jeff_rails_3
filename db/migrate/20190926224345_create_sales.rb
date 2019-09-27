@@ -4,6 +4,7 @@ class CreateSales < ActiveRecord::Migration[5.1]
       t.string :name
       t.string :email
       t.string :phone
+      t.references :department, foreign_key: true
 
       t.timestamps
     end
