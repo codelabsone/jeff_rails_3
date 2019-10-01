@@ -1,3 +1,3 @@
 class Department < ApplicationRecord
-  has_one :sale
+  has_many :sale
 end
