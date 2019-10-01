@@ -13,9 +13,8 @@
 ActiveRecord::Schema.define(version: 20190927011042) do
 
   create_table "departments", force: :cascade do |t|
-    t.string "sales"
-    t.string "finance"
-    t.string "inventory"
+    t.string "name"
+    t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
