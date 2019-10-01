@@ -3,19 +3,22 @@
     <ul style="list-style-type:none">
       <li>
         <%= label_tag( "Loan amount") %>
-        <%= number_field_tag(:loan_amount) %>
+        <%= text_field_tag(:loan_amount) %>
       </li>
       <li>
         <%= label_tag( "Trade-in value") %>
-        <%= number_field_tag(:trade_in) %>
+        <%= text_field_tag(:trade_in) %>
       </li>
     </ul>
-    <%= button_to("Calculate Payment", method="post") %>
+    <%= button_to("Calculate Payment", method="Payment_Calculation") %>
 
   </fieldset>
 <% end %>
 
-
-<p>Your loan amount is <%= @loan_amount %></p>
-<p>Your trade-in amount is <%= @trade_in %></p>
-<p>Your total amount is <% @total_loan%> </p>
+<% if @total_loan = 0 %>
+  <p>Enter information above to calcuate your total loan.</p>
+<% else %>
+  <p>Your loan amount is <%= @loan_amount %></p>
+  <p>Your trade-in amount is <%= @trade_in %></p>
+  <p>Your total amount is <% @total_loan%> </p>
+<% end %>
