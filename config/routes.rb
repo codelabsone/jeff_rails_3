@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :sales
+  get "departments/sales" => "departments#sales"
   root "departments#index"
-  resources :departments
+  resources :departments do
+    resources :sales
+  end
 end

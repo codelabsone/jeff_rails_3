@@ -1,5 +1,5 @@
 class SalesController < ApplicationController
   def index
-    @sales = Sales.all
+    @sales = @department.sales
   end
 end
