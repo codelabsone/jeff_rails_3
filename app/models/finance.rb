@@ -1,8 +1,4 @@
-def Payment_Calculation
-  @loan_amount = :loan_amount.to_f
-  @trade_in = :trade_in.to_f
-  @total_loan = @loan_amount - @trade_in
-  redirect_to: 'views/_finance.html.erb'
+class Finance < ApplicationRecord
 end
 
 

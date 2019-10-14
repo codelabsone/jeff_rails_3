@@ -1,4 +1,4 @@
-<%= form_with(url: "/finance", method: "get") do %>
+<%= form_tag url: "/departments/s" :post  do %>
   <fieldset>
     <ul style="list-style-type:none">
       <li>
@@ -10,7 +10,7 @@
         <%= text_field_tag(:trade_in) %>
       </li>
     </ul>
-    <%= button_to("Calculate Payment", method="Payment_Calculation") %>
+     <%= submit_tag "Calculate Payment" %>
 
   </fieldset>
 <% end %>
