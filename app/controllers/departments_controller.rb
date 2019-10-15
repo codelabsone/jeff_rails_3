@@ -8,7 +8,10 @@ class DepartmentsController < ApplicationController
   end
 
   def sales
+    @department = Department.find_by(name: "Sales")
+    @sales = @department.sale
     render template:
     "departments/sales"
+
   end
 end

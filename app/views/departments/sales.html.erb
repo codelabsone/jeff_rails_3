@@ -1,5 +1,9 @@
-<header>
-  <div class="container-fluid">
-    <h1>Sales Team</h1>
-  </div>
-</header>
+<div class="container-fluid">
+  <header>
+    <h1><span>Sales Team</span></h1>
+  </header>
+</div>
+
+<% @sales.each do |sale| %>
+  <h2><%= link_to(sale.name, department_sale_path) %></h2>
+<% end %>
