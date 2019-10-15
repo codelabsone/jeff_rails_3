@@ -1,24 +1,29 @@
-<%= form_tag url: "/departments/s" :post  do %>
+<script>
+$( document ).ready(function() {
+  var payment = $("#calculate-value").text("$0.00")
+      $("input").change(function(){
+          var loan = $("#loan input").val()
+          var value = $("#value input").val()
+          payment = loan - value
+          $("#calculate-value").text("$" + payment)
+      });
+});
+  </script>
+
+<%= form_with do |f| %>
   <fieldset>
     <ul style="list-style-type:none">
-      <li>
-        <%= label_tag( "Loan amount") %>
-        <%= text_field_tag(:loan_amount) %>
+      <li id="loan">
+        <%= f.label( "Loan amount") %>
+        <%= f.text_field(:loan_amount)%>
       </li>
-      <li>
-        <%= label_tag( "Trade-in value") %>
-        <%= text_field_tag(:trade_in) %>
+      <li id="value">
+        <%= f.label( "Trade-in value") %>
+        <%= f.text_field(:trade_in) %>
       </li>
     </ul>
-     <%= submit_tag "Calculate Payment" %>
+
+    <div>Payment:</div><div id="calculate-value"></div>
 
   </fieldset>
-<% end %>
-
-<% if @total_loan = 0 %>
-  <p>Enter information above to calcuate your total loan.</p>
-<% else %>
-  <p>Your loan amount is <%= @loan_amount %></p>
-  <p>Your trade-in amount is <%= @trade_in %></p>
-  <p>Your total amount is <% @total_loan%> </p>
 <% end %>
