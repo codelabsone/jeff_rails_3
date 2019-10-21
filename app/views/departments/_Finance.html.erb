@@ -1,1 +1,32 @@
-<p>Insert finance stuff here.</p>
+<script>
+$( document ).ready(function() {
+  var payment = $("#calculate-value").text("$0.00")
+      $("input").change(function(){
+          var loan = $("#loan input").val()
+          var value = $("#value input").val()
+          payment = loan - value
+          $("#calculate-value").text("$" + payment)
+      });
+});
+  </script>
+
+<%= form_with do |f| %>
+  <fieldset>
+    <ul style="list-style-type:none">
+      <li id="loan">
+        <%= f.label( "Loan amount") %>
+        <%= f.text_field(:loan_amount)%>
+      </li>
+      <li id="value">
+        <%= f.label( "Trade-in value") %>
+        <%= f.text_field(:trade_in) %>
+      </li>
+    </ul>
+
+    <div>Payment:</div><div id="calculate-value"></div>
+
+  </fieldset>
+<% end %>
+<p>
+<%= link_to 'Home', departments_path %>
+</p>

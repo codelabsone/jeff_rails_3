@@ -2,7 +2,12 @@ class DepartmentsController < ApplicationController
   def index
     @department = Department.all
   end
+
   def show
-    @department = Department.find(params[:id])
+    @departments = Department.find(params[:id])
+  end
+
+  def create
+    @departments = Department.find(params[:id])
   end
 end

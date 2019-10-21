@@ -10,10 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 0) do
-=======
-ActiveRecord::Schema.define(version: 20190916235436) do
+ActiveRecord::Schema.define(version: 20190918235436) do
 
   create_table "departments", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -21,6 +18,5 @@ ActiveRecord::Schema.define(version: 20190916235436) do
     t.string "name"
     t.string "description"
   end
->>>>>>> ac5bad0f94a7e7b7b05594660147353b6c6cde9d
 
 end
